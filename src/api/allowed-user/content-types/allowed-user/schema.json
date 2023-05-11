@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allowed_users",
+  "info": {
+    "singularName": "allowed-user",
+    "pluralName": "allowed-users",
+    "displayName": "Allowed User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "allowed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
