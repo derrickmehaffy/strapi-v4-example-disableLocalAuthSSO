@@ -1,0 +1,12 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Local",
+      "group": "SQLite",
+      "database": "./.tmp/data.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}

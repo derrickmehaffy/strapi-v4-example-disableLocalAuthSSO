@@ -9,15 +9,12 @@ module.exports = {
    */
   register({ strapi }) {
     const adminRoutes = strapi.admin.routes.admin.routes;
-    console.log(
-      adminRoutes.find((entry, i) => {
-        if (entry.method === "POST" && entry.path === "/login") {
-          adminRoutes[i].config.middlewares.push("global::allowedLocalAuth");
-          console.log(adminRoutes[i].config.middlewares);
-          return true;
-        }
-      })
-    );
+    adminRoutes.find((entry, i) => {
+      if (entry.method === "POST" && entry.path === "/login") {
+        adminRoutes[i].config.middlewares.push("global::allowedLocalAuth");
+        return true;
+      }
+    });
   },
 
   /**

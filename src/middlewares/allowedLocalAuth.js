@@ -7,8 +7,6 @@
 module.exports = (config, { strapi }) => {
   // Add your own logic here.
   return async (ctx, next) => {
-    console.log(ctx.request.body);
-
     if (ctx.request.body.email) {
       const allowedUser = await strapi.entityService.findMany(
         "api::allowed-user.allowed-user",
